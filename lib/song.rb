@@ -1,6 +1,7 @@
-require 'pry'
+# require 'pry'
 class Song
   attr_accessor :name, :artist_name
+
   @@all = []
 
   def initialize
@@ -42,12 +43,12 @@ class Song
   end 
 
   def self.find_or_create_by_name(title)
-    result = self.find_by_name(title)
-    if result 
-      result
+    result_1 = self.find_by_name(title)
+    if result_1 
+      result_1
     else
-      new = self.create_by_name(title)
-      new 
+    result_2 = self.create_by_name(title)
+    result_2
     end 
   end
 
